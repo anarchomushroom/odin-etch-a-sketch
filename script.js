@@ -10,5 +10,10 @@ for (let i = 0; i < 16; i++) {
         const pixel = document.createElement("div")
         pixel.className = "pixel"
         row.appendChild(pixel)
+
+        // Colour change event
+        pixel.addEventListener("mouseover", () => {
+            pixel.style.backgroundColor = "black";
+        })
     }
 }

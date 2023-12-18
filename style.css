@@ -2,6 +2,11 @@
     box-sizing: border-box;
 }
 
+body {
+    display: flex;
+    flex-direction: column;
+}
+
 .sketchpad {
     display: flex;
     flex-wrap: wrap;
@@ -18,4 +23,9 @@
 .pixel {
     width: 100%;
     aspect-ratio: 1 / 1;
+}
+
+.new-grid {
+    width: auto;
+    align-self: center;
 }

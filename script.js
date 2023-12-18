@@ -1,4 +1,5 @@
 const sketchpad = document.querySelector(".sketchpad");
+const button = document.querySelector(".new-grid");
 
 // Populate sketchpad with divs
 function populateGrid(size) {
@@ -19,6 +20,19 @@ function populateGrid(size) {
         }
     }   
 }
+
+// Set up listen even for button onclick
+button.addEventListener("click", () => {
+    let size = prompt("Please enter a number for the new height and width:")
+    // Stop size greater than 100
+    while (size > 100) {
+        size = prompt("You cannot input a number greather than 100. Please try again:")
+    };
+    // Clear current sketchpad
+    sketchpad.replaceChildren();
+    // Repopulate grid
+    populateGrid(size);
+})
 
 // Load default grid of 16 x 16
 populateGrid(16);
